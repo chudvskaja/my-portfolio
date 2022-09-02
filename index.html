@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min portefølje</title>
+    <title>Xenia Biriukova - webudvikler</title>
+    <link rel="icon" type="image/x-icon" href="./images/computer-svgrepo-com.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +16,11 @@
 <body>
     <header>
     <nav>
-    <p class="logo">K.Biriukova</p>
+    <p class="logo">Xenia Biriukova</p>
     <ul class="links-list">
-    <li><a class="nav-link" href="">Om mig</a></li>
-    <li><a class="nav-link" href="#projects">Mine projecter</a></li>
-    <li><a class="nav-link" href="#footer">Kontacts</a></li>
+    <li><a class="nav-link" href="#about-me">Om mig</a></li>
+    <li><a class="nav-link" href="#projects">Mine projekter</a></li>
+    <li><a class="nav-link" href="#footer">Kontakt</a></li>
 </ul>
 <ul class="social-media-list">
     <li><a href="https://www.facebook.com/ksenija.chudovskaja" target="_blank">
@@ -29,22 +30,48 @@
         <i class="fa-brands fa-github"></i></a></li>
 </ul>
     </nav>
+
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+        <li><p class="mobile-menu-title">Xenia Biriukova</p></li>
+        <li class="mobile-link"><a href="#about-me">Om mig</a></li>
+        <li class="mobile-link"><a href="#projects">Mine projekter</a></li>
+        <li class="mobile-link"><a href="#footer">Kontakt</a></li>
+        </ul>
+        </div>
 </header>
     <main>
-    <!-- <div class="container"> -->
-        <section class="about-me">
-            <div class="photo-container"><img class="header-photo" src="./images/me.jpg" alt="My picture"></div>
+        <section class="about-me" id="about-me">
+<div class="photo-container">
+               <picture>
+                <source
+                srcset="
+                      /images/me.jpg 1x"
+                      media="(min-width: 768px)">
+                <source
+                srcset="
+                      /images/me.png 1x"
+                      media="(min-width: 320px)">
+                
+              <img class="header-photo" src="./images/me.png" 
+              alt="Xenia Biriukova - webudvikler"/>
+            </picture>
+        </div>
             <div class="text">
             <p>Hej</p>
-            <p>Jeg hedder Kseniia</p>
+            <p>Jeg hedder Xenia</p>
             <h1>Jeg er webudvikler</h1>
             
         </div>
         <div class="small-text">
-            <p>Jeg elsker at kode og løse problemer både med logiske og creative løsninger.  Jeg er altid nysgerrig efter hvordan ting er lavet og hvordan de fungerer, men jeg synes, at der altid er plads for forbedring</p>
+            <p>"Jeg elsker at kode og løse problemer både med logiske og creative løsninger.  Jeg er altid nysgerrig efter hvordan ting er lavet og hvordan de fungerer, men jeg synes, at der altid er plads for forbedring"</p>
         </div>
         </section>
         <section class="my-projects" id="projects">
+            <h2>Mine projekter</h2>
             <ul class="project-list">
                 <li class="project-item">
                     <a href="https://chudvskaja.github.io/sushi-opgave-juni2022/" target="_blank">
@@ -71,7 +98,11 @@
                     </a>
                 </li>
              
-                <li></li>
+                <li class="project-item"><a href="https://chudvskaja.github.io/goit-markup-hw-09/">
+                    <img class="project-photo" src="./images/web-studio.png" alt="web studio site">
+                    <p>Web studio projekt</p> 
+                </a>
+            </li>
                 <li></li>
             </ul>
         </section>
@@ -93,11 +124,17 @@
           <a class="mail" href="mailto:chudvskaja.ksenija@icloud.com">chudvskaja.ksenija@icloud.com</a>
         </div>
     </div>
+    <ul class="links-list">
+        <li><a class="nav-link" href="#about-me">Om mig</a></li>
+        <li><a class="nav-link" href="#projects">Mine projecter</a></li>
+        <li><a class="nav-link" href="#footer">Kontacts</a></li>
+    </ul>
     </footer>
     <script
     src="https://kit.fontawesome.com/0518abe1b3.js"
     crossorigin="anonymous"
   ></script>
+  <script src="toggle-menu.js"></script>
   
 </body>
 </html>

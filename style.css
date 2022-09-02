@@ -13,8 +13,6 @@ a {
 
 a:hover {
     color: rgb(206, 82, 37);
-
-
 }
 
 ul {
@@ -26,158 +24,357 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
-    padding: 30px;
-}
-
-.container {
-margin: 0 auto;
-width: 1440px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-}
-
-i {
-    font-size: 30px;
-}
-
-.logo {
-    font-size: 30px;
+h2 {
     color: #fff;
-}
-
-.links-list, .social-media-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-media-list {
-    gap: 20px;
-}
-
-.nav-link {
-    padding: 20px 20px;
-   
-}
-
-.links-list>li {
-    border-right: 1px solid #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 
+@media screen and (min-width: 320px) and (max-width:767px) {
+    nav {
+        display: none;
+    }
 
-.photo-container {
-    width: 100%;
-    height: 80vh;
-} 
-.header-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    a {
+        color: rgb(206, 82, 37);
+    }
+
+   .nav-link, .tel, .mail {
+        color: #fff;
+    }
+    
+    .photo-container {
+        width: 100%;
+    } 
+
+    .header-photo {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+     }
+    
+    .about-me {
+        background-color: #fff;
+    }
+    
+    .text {
+        position: absolute;
+        left: 70%;
+        top: 25%;
+        text-align: center;
+        font-size: 14px;
+        animation-duration: 3s;
+        animation-name: slidein;    
+    }
+    
+     h1 {
+    font-size: 14px;
+    color: rgb(21, 11, 8);
+    animation-duration: 3s;
+    animation-name: slidein;
+    }
+          
+          
+    @keyframes slidein {
+            from {
+              margin-left: 100%;
+              width: 300%;
+            }
+          
+            to {
+              margin-left: -40%;
+              width: 100%;
+            }
+          }
   
- }
+    .my-projects {
+        padding: 50px 20px;
+    }
+    
+    .project-list {
+        display: block
+    }
+    
+    .project-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-.about-me {
-    position: relative;
-}
+    .project-photo {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .project-item > a > p {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    address, .fa-envelope, .fa-mobile-screen {
+        color: #fff;
+    }
+    
+    address {
+        font-size: 14px;
+        text-transform: none;
+        font-style: normal;
+        margin-bottom: 20px;
+    }
+    
+    footer {
+        padding: 50px 20px;
+        display: block;
+        font-size: 14px;
+       
+    }
+    
+    .contacts {
+        display: block;
+        margin-bottom: 20px;
+      
+    }
+    
+    .tel, .mail, .nav-link {
+        font-size: 14px;
 
-.text {
-    position: absolute;
-    left: 72%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
+    }
+    
+    
+    .small-text {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    #hamburger-icon {
+        margin: 0;
+        display: block;
+        cursor: pointer;  
+      }
+      
+      #hamburger-icon div {
+          width: 35px;
+          height: 3px;
+          background: #fff;
+          border-radius: 5px;
+          margin: 6px 0;
+          transition: 0.4s;
+      }
+      
+      .mobile-menu {
+          display: none;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: var(--dark-color);
+          padding-top: 100px;
+      }
+      
+      .open .mobile-menu {
+        background-color: #333;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          z-index: 200;
+      }
+      
+      .open .bar1 {
+          -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+          transform: rotate(-45deg) translate(-6px, 6px);
+         
+      }
+      
+      .open .bar2 {
+          opacity: 0;
+      
+      }
+      
+      .open .bar3 {
+          -webkit-transform: rotate(45deg) translate(-6px, -6px);
+          transform: rotate(45deg) translate(-6px, -6px);
+          
+      }
+
+      header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+        padding: 20px;
+      }
+
+      .mobile-menu-title {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .mobile-link  > a{
+        font-size: 24px;
+        display: block;
+        margin-bottom: 20px;
+      }
+    
+    
     
 }
 
- h1 {
-    text-transform: uppercase;
-    position: relative;
-    animation: text 4s 1;
-    font-size: 40px;
-    color: rgb(206, 82, 37);
-}
+/* ========================   DESKTOP  ================================= */
 
-
-.my-projects {
-    padding: 100px;
-}
-
-.project-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-}
-
-.project-item {
-    width: 25%;
-    height: 350px;
-}
-
-.project-photo {
-    width: 100%;
-    height: 100%;
-}
-
-.project-item > a > p {
-    text-align: center;
-}
-
-address, .fa-envelope, .fa-mobile-screen {
-    color: #fff;
-}
-
-address {
-    font-size: 20px;
-    text-transform: none;
-    font-style: normal;
-}
-
-footer {
-    padding: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contacts {
-    display: block;
-}
-
-.tel, .mail {
-    padding: 10px;;
-}
-
-
-@keyframes text {
-    0% {
-        color:  rgb(241, 231, 231); 
-
- 
+@media screen and (min-width:768px) {
+       
+    header {
+        padding: 30px;
     }
+    
 
-    30%  {
-      
-        color: rgb(241, 231, 231); 
- 
+    .hamburger-icon, .mobile-menu {
+        display: none;
+    }
+    
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    i {
+        font-size: 30px;
+    }
+    
+    .logo {
+        font-size: 30px;
+        color: #fff;
+    }
+    
+    .links-list, .social-media-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .social-media-list {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        padding: 20px 20px;
        
     }
+    
+    .links-list > li {
+        border-right: 1px solid #fff;
+    }
+    
+    .photo-container {
+        width: 100%;
+        height: 100vh;
+    } 
 
-  
-}
-
-.small-text {
-    position: absolute;
-    width: 400px;
-    bottom: 120px;
-    right: 220px;
-    font-size: 20px;
+    .header-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      
+     }
+    
+    .about-me {
+        position: relative;
+    }
+    
+    .text {
+        position: absolute;
+        left: 72%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        
+    }
+    
+     h1 {
+        text-transform: uppercase;
+        position: relative;
+        animation: text 4s 1;
+        font-size: 40px;
+        color: rgb(206, 82, 37);
+    }
+    
+    
+    .my-projects {
+        padding: 100px;
+    }
+    
+    .project-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    
+    }
+    
+    .project-item {
+        width: 33%;
+        height: 450px;
+        margin-bottom: 30px;
+    }
+    
+    .project-photo {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .project-item > a > p {
+        text-align: center;
+    }
+    
+    address, .fa-envelope, .fa-mobile-screen {
+        color: #fff;
+    }
+    
+    address {
+        font-size: 20px;
+        text-transform: none;
+        font-style: normal;
+    }
+    
+    footer {
+        padding: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .contacts {
+        display: block;
+    }
+    
+    .tel, .mail {
+        padding: 10px;;
+    }
+    
+    
+    @keyframes text {
+        0% {
+            color:  rgb(241, 231, 231); 
+        }
+        30%  {
+          
+            color: rgb(241, 231, 231);   
+        }
+    
+      
+    }
+    
+    .small-text {
+        position: absolute;
+        width: 400px;
+        bottom: 220px;
+        right: 220px;
+        font-size: 20px;
+    }
 }
 
